@@ -1,24 +1,37 @@
-import java.util.Scanner;
-class Suma {
-    int a, b;
+class Suma{
+    int num1, num2; // Atributos
 
-    Suma() {
-        System.out.println("SE ESTA CONSTRUYENDO LA SUMA");
+    // Método constructor vacío
+    Suma(){
     }
 
-    public void sumarA() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingresa el primer numero: ");
-        a = scanner.nextInt();
+    // Método para mostrar el resultado de la suma
+    public void MostrarResultado(){
+        System.out.println("El resultado es " + (this.num1 + this.num2));
     }
 
-    public void sumarB() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingresa el segundo numero: ");
-        b = scanner.nextInt();
+    // Métodos para obtener y establecer el valor de num1
+    public int getNum1() {
+        return num1;
     }
 
-    public void mostrarResultado() {
-        System.out.println("El resultado es: " + (a + b));
+    public void setNum1(int num1) {
+        this.num1 = num1;
     }
+
+    // Métodos para obtener y establecer el valor de num2
+    public int getNum2() {
+        return num2;
+    }
+
+    public void setNum2(int num2) {
+        this.num2 = num2;
+    }
+
+    // Método para representar el objeto como una cadena de texto
+    @Override
+    public String toString() {
+        return "Suma [num1=" + num1 + ", num2=" + num2 + "]";
+    }
+        
 }
